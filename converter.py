@@ -8,9 +8,13 @@
 # WARNING! All changes made in this file will be lost!
 
 from coder import Convertor
-from PyQt4 import QtCore, QtGui
-from PyQt4.QtCore import QString
-from PyQt4.QtGui import QFileDialog
+try:
+    from PyQt4 import QtCore, QtGui
+    from PyQt4.QtCore import QString
+    from PyQt4.QtGui import QFileDialog
+except ImportError:
+    raise SystemExit('\n[!] PyQt4 is requried\n')
+
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
